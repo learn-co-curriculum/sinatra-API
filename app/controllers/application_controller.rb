@@ -14,34 +14,8 @@ class ApplicationController < Sinatra::Base
     200
   end
 
-
-  get "/dogs" do
-    Dog.all.to_json 
-  end
-
-  post '/dogs' do
-    dog = Dog.create(strong_params)
-    dog.to_json 
-  end
-
-  patch "/dogs/:id" do
-    dog = Dog.find(params[:id])
-    dog.update(strong_params)
-    dog.to_json
-  end
-
-  delete "/dogs/:id" do
-    dog = Dog.find(params[:id])
-    dog.update(strong_params)
-    dog.to_json
-  end
-
-
-  private
-  def strong_params
-    params.slice(:name, :age)
-  end
-
-
+  # method "URL" do
+    
+  # end
 
 end
