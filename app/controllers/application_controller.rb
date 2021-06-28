@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
 
   delete "/dogs/:id" do
     dog = Dog.find(params[:id])
-    dog.update(strong_params)
+    dog.destroy
     dog.to_json
   end
 
